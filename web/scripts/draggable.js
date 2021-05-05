@@ -30,9 +30,9 @@ function Draggable(elem) {
     }.bind(this)
 
     this.endMove = function (evt) {
-        result = vector_to_degrees(vector(
+        result = vector_to_radians(vector(
             point(this.clickPoint.x, this.clickPoint.y),
-            point(this.lastMove.x, this.lastMove.x)
+            point(this.lastMove.x, this.lastMove.y)
         ))
         log("result:", result)
         this.lastMove.x = this.currentMove.x
