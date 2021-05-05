@@ -3,6 +3,17 @@
 /*    margin: 0;*/
 /*    padding: 0;*/
 /*}*/
+#svg1{
+    border: 1px solid black;
+    background: #E0FFFF;
+}
+.dragged {
+    fill-opacity: 0.5;
+    stroke-width: 0.5px;
+    stroke: black;
+    stroke-dasharray: 1 1;
+}
+.draggable{cursor:move}
 
 body {
     background-color: #ddd;
