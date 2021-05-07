@@ -1,0 +1,24 @@
+#https://dotuml.com/playground.html#
+
+StateDiagram [frame=true framecolor=steelblue label="State Diagram" splines=ortho] {
+  state Explore
+  state Define_Feature
+  state Train_Feature
+  state Queue_Notice
+	state Review_Harvest
+
+  initialState->Explore
+
+  Explore -> Define_Feature "Add Feature"
+
+  Define_Feature -> Explore "Close Dialog"
+  Define_Feature -> Train_Feature "Train"
+  Train_Feature -> Queue_Notice "Harvest"
+  Queue_Notice -> Explore "Close Dialog"
+
+  Explore -> Review_Harvest "Review Harvest"
+  Review_Harvest -> Explore "Accept Harvest"
+  Review_Harvest -> Train_Feature "Reject Harvest"
+  Review_Harvest -> Explore "Close Dialog"
+
+}
